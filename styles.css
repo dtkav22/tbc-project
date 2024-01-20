@@ -1,0 +1,260 @@
+ html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    position: fixed;
+    margin: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(28, 28, 27);
+    z-index: 1;
+}
+
+#logo {
+    height: 60%;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+ul{
+    height: 100%;
+    float: right;
+    margin-right: 20%;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 8px;
+}
+
+li a {
+    font-size: 14px;
+    margin-right: 40px;
+    color: rgb(227, 227, 227);
+    text-decoration: none;
+}
+
+li a:hover {
+    color: rgb(108, 94, 255);
+}
+
+#icon {
+    width: 80px;
+    height: 90px;
+    display: none;
+}
+
+@media only screen and (max-width: 1048px){
+    ul {
+        height: 100vh;
+        width: auto;
+        background-color: rgb(28, 28, 27);
+        margin: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 15vh;
+    }
+
+    #icon {
+        display: inline-block;
+        position:fixed;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+#title-div {
+    margin: 0px;
+    width: 100%;
+    height: 350px;
+    background-image: url("./assets/images/title-background.webp");
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-h1-tags-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title-h1-tags {
+    color: white;
+}
+
+#company-desc-div{
+    width: 100%;
+    height: 60%;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+
+#desc-text {
+    width: 55%;
+    height: 90%;
+    min-width: 700px;
+    font-size: 25px;
+    line-height: 35px;
+    word-spacing: 9px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#desc-more{
+    color: rgb(79, 82, 247);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+    #desc-text {
+        font-size: 21px;
+        line-height: 30px;
+        word-spacing: 7px;
+        min-width: 450px;
+        width: 90%;
+    }
+    
+    #desc-more {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    #company-desc-div {
+        height: auto;
+    }
+
+    #desc-text {
+        font-size: 18px;
+        word-spacing: 5px;
+        min-width: 0px;
+    }
+
+    #desc-more {
+        font-size: 17px;
+    }
+
+    .title-h1-tags {
+        font-size: 1.6em;
+    }
+
+}
+
+#desc-more:hover {
+    color:rgb(181, 181, 189);
+}
+
+#learning-courses-wrapper {
+    height: auto;
+    width: 100%;
+    background-color: rgb(25, 25, 24);
+    display: flex;
+    justify-content: center;
+}
+
+#learning-courses-div {
+    width: 48vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#courses {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 25px;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    border: 1px ridge grey;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-img {
+    width: 100%;
+    height: 40%;
+}
+
+.course-title, .reg-text {
+    font-size: 18px;
+    color: white;
+}
+
+.course-details {
+    width: 80%;
+    text-decoration: none;
+    color: rgb(79, 82, 247);
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+    #learning-courses-div {
+        width: 60vw;
+    }
+
+    .course-details, .reg-text, .course-title {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #learning-courses-div {
+        width: 70%;
+    }
+    #courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    #courses {
+        grid-template-columns: 80vw;
+        grid-auto-rows: 50vh;
+    }
+
+    #desc-text {
+        font-size: 18px;
+        word-spacing: 5px;
+        min-width: none;
+        height: auto;
+        width: auto;
+    }
+
+    #desc-more {
+        font-size: 17px;
+    }
+
+    .title-h1-tags {
+        font-size: 1.6em;
+    }
+
+}
