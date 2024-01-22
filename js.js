@@ -1,15 +1,9 @@
-function showMenu() {
+let showSidebar = () => {
     const sidebar = document.getElementsByTagName("ul");
-    if(sidebar[0].style.display === "flex") {
-        sidebar[0].style.display = "none";
-    } else {
-        sidebar[0].style.display = "flex";
-    }
-    
+    sidebar[0].style.display = (sidebar[0].style.display == "flex" ? "none" : "flex");
 }
 
 window.addEventListener('resize', function(event) {
     const sidebar = document.getElementsByTagName("ul");
-    const menu_bar = this.document.getElementById('icon');
-    sidebar[0].style.display = "flex";
+    sidebar[0].style.display = (window.matchMedia("(min-width: 1048px)").matches && "flex");
 }, true);
