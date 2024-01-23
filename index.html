@@ -18,7 +18,7 @@
             </ul>
             <img onclick = "showSidebar()" src = "./assets/images/menu-icon.png" id = "icon">
         </nav>
-        <div style = "height: 100px"></div>
+        <div style = "height: 100px" id = "under-nav-div"></div>
         <div id = "title-div">
             <div id = "title-h1-tags-div">
                 <h1 class = "title-h1-tags">TBC x USAID</h1>
@@ -114,6 +114,39 @@
                 </div>
             </div>
         </div>
-        
+        <div id = "partners-wrapper">
+            <div class = "slide-button-wrapper">
+                <button onClick = "slide(-1, -1)" class = "slide-button">&lt;</button>
+            </div>
+            <div id = "partners-div">
+                <h2 id = "partners-title">პროექტის პარტნიორები</h2>
+                <div id = "partners">
+                    <div class = "section-of-partners" id = "section-1">
+                        <img src = "assets/images/usaid.webp" class = "partner" id = "partner-1">
+                        <img src = "assets/images/Tegeta logo geo.webp" class = "partner middle-partners" id = "partner-4">
+                    </div>
+                    
+                    <div class = "section-of-partners" id = "section-2">
+                        <img src = "assets/images/space int.webp" class = "partner" id = "partner-2">
+                        <img src = "assets/images/spectre logo.webp" class = "partner middle-partners" id = "partner-5">
+                        <img src = "assets/images/UFC GEO.webp" class = "partner right-partners" id = "partner-7">
+                    </div>
+                
+                    <div class = "section-of-partners" id = "section-3">
+                        <img src = "assets/images/tinet.webp" class = "partner" id = "partner-3">
+                        <img src = "assets/images/tbc leazing.webp" class = "partner middle-partners" id = "partner-6">
+                    </div>
+                </div>
+                <div id = "dot-slider-div">
+                    <div onClick = "slide(0, 0)" class = "dot-slider"></div>
+                    <div onClick = "slide(0, 1)" class = "dot-slider"></div>
+                    <div onClick = "slide(0, 2)" class = "dot-slider"></div>
+                </div>
+            </div>
+            <div class="slide-button-wrapper">
+                <button onClick = "slide(1, -1)" class = "slide-button">&gt;</button>
+            </div>
+        </div>
+        <div style="height: 100%; background-color: rgb(25, 25, 24);"></div>
     </body>
 </html>

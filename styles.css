@@ -55,7 +55,7 @@ li a:hover {
     ul {
         height: 100vh;
         width: auto;
-        background-color: rgb(28, 28, 27);
+        background-color: rgb(28, 28, 27, 0.95);
         margin: 0;
         display: none;
         flex-direction: column;
@@ -181,10 +181,11 @@ li a:hover {
 }
 
 #learning-courses-div {
-    width: 48vw;
+    width: 52vw;
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding: 30px;
 }
 
 #courses {
@@ -192,7 +193,7 @@ li a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-row-gap: 15px;
+    grid-row-gap: 30px;
     grid-column-gap: 25px;
 }
 
@@ -224,23 +225,121 @@ li a:hover {
     font-size: 18px;
 }
 
+#partners-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    justify-content: center;
+}
+
+#partners-div {
+    width: 52vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#partners-title {
+    color:white;
+    width: 100%;
+    height: auto;
+}
+
+#partners {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-of-partners {
+    width: 13vw;
+    height: 3vw;
+}
+
+.partner {
+    width: 13vw;
+    height: 4vw;
+    position: relative;
+}
+
+.middle-partners, .right-partners {
+    opacity: 0;
+}
+
+.middle-partners {
+    bottom: 4vw;
+}
+
+.right-partners {
+    bottom: 8vw;
+}
+
+#dot-slider-div {
+    margin-top: 70px;
+    width: 50px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dot-slider {
+    background-color: white;
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    border-radius: 5px;
+}
+
+.slide-button-wrapper {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-button {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: white;
+    background-color: rgb(56, 56, 56);
+    border: none;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
-    #learning-courses-div {
+    #learning-courses-div, #partners-div {
         width: 60vw;
     }
 
     .course-details, .reg-text, .course-title {
         font-size: 15px;
     }
+
 }
 
 @media screen and (max-width: 800px) {
 
-    #learning-courses-div {
+    #learning-courses-div, #partners-div {
         width: 80%;
     }
+    
     #courses {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #partners-title {
+        font-size: 20px;
+    }
+
+    .slide-button {
+        font-size: 25px;
     }
 }
 
@@ -251,4 +350,30 @@ li a:hover {
         grid-auto-rows: 45vh;
     }
 
+    #partners {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 20px;
+    }
+
+    .partner, .section-of-partners {
+        width: 100%;
+        height: 15vw;
+    }
+
+    .section-of-partners {
+        height: 15vw;
+    }
+
+    .middle-partners {
+        bottom: 15vw;
+    }
+    
+    .right-partners {
+        bottom: 30vw;
+    }
+
+    .slide-button {
+        font-size: 40px;
+    }
 }
