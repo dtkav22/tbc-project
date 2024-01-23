@@ -49,6 +49,9 @@ li a:hover {
     width: 80px;
     height: 90px;
     display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 @media screen and (max-width: 1048px){
@@ -206,6 +209,7 @@ li a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 5%;
 }
 
 .course-img {
@@ -223,6 +227,11 @@ li a:hover {
     text-decoration: none;
     color: rgb(79, 82, 247);
     font-size: 18px;
+    margin-top: 15%;
+}
+
+.course-details:hover {
+    color: rgb(45, 48, 243)
 }
 
 #partners-wrapper {
@@ -247,6 +256,7 @@ li a:hover {
     color:white;
     width: 100%;
     height: auto;
+    margin-bottom: 10vh;
 }
 
 #partners {
@@ -313,23 +323,222 @@ li a:hover {
     cursor: pointer;
 }
 
+.slide-button:hover {
+    color: rgb(181, 181, 189)
+}
+
+#ending-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: rgb(26, 34, 33);
+    display: flex;
+    justify-content: center;
+}
+
+#ending-div {
+    width: 52vw;
+    height: auto;
+    padding: 50px;
+}
+
+#ending-logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tbc-logo {
+    width: 106px;
+    height: 30px;
+}
+
+#ending-infos {
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+#rights-rules-txt {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#support-link {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#rights-txt, #rights-txt a{
+    color: white;
+    text-decoration: none;
+}
+
+#rules-txt-caller {
+    color: white;
+    cursor: pointer;
+}
+
+#rules-txt-caller:hover {
+    color: rgb(181, 181, 189);
+}
+
+#support-link button{
+    width: auto;
+    height: auto;
+    color: white;
+    background-color: rgb(79, 82, 247);
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#support-link button:hover {
+    background-color: rgb(181, 181, 189);
+    color: rgb(25, 25, 24);
+}
+
+#rules-txt {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    background-color: rgb(181, 181, 189);
+    height: 100%;
+    width: 50%;
+}
+
+#rules-txt object {
+    height: 90%;
+    width: 100%;
+    background-color: rgb(181, 181, 189);
+}
+
+#rules-txt button {
+    background-color: rgb(79, 82, 247);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50%;
+    width: 100px;
+    height: 50px;
+}
+
+#questions-wrapper {
+    height: auto;
+    width: 100%;
+    background-color: rgb(25, 25, 24);
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#questions-and-title-div {
+    width: 52vw;
+    height: auto;
+}
+
+#questions-title-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#questions-title-div h2 {
+    color:white;
+    font-size: 22px;
+}
+
+#questions-title-div a {
+    text-decoration: none;
+    color:rgb(79, 82, 247);
+    font-size: 20px;
+}
+
+#questions-title-div a:hover {
+    color: white;
+}
+
+#questions-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-and-answer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    border-bottom: white ridge 1px;
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-txt, .question-arrow{
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.answer {
+    width: 100%;
+    height: auto;
+}
+
+.answer p {
+    color: white;
+    line-height: 30px;
+}
+
+#answer-1-steps {
+    width: 90%;
+    margin-left: 5%;
+}
+
+
 @media screen and (max-width: 1200px) {
-    #learning-courses-div, #partners-div {
+    #learning-courses-div, #partners-div, #ending-div, #questions-and-title-div {
         width: 60vw;
     }
 
-    .course-details, .reg-text, .course-title {
+    #questions-title-div h2, #questions-title-div a, .question-txt, .question-arrow {
+        font-size: 20px;
+    }
+
+    .course-details, .reg-text, .course-title{
         font-size: 15px;
+    }
+
+    #support-link button {
+        font-size: 12px;
     }
 
 }
 
 @media screen and (max-width: 800px) {
 
-    #learning-courses-div, #partners-div {
+    #learning-courses-div, #partners-div, #ending-div, #questions-and-title-div {
         width: 80%;
     }
     
+    #questions-title-div h2, #questions-title-div a, .question-txt, .question-arrow {
+        font-size: 16px;
+    }
+
     #courses {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -340,6 +549,9 @@ li a:hover {
 
     .slide-button {
         font-size: 25px;
+    }
+    #support-link button {
+        width: auto;
     }
 }
 
@@ -374,6 +586,24 @@ li a:hover {
     }
 
     .slide-button {
-        font-size: 40px;
+        font-size: 30px;
+    }
+
+    #ending-infos {
+        flex-direction: column;
+    }
+
+    #support-link {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #fb-logo, #yt-logo {
+        width: 30px;
+    }
+
+    #tbc-logo {
+        width: 80px;
     }
 }

@@ -147,6 +147,82 @@
                 <button onClick = "slide(1, -1)" class = "slide-button">&gt;</button>
             </div>
         </div>
-        <div style="height: 100%; background-color: rgb(25, 25, 24);"></div>
+        <div id="questions-wrapper">
+            <div id = "questions-and-title-div">
+                <div id="questions-title-div">
+                    <h2>ხშირად დასმული შეკითხვები</h2>
+                    <a href = "https://www.tbcacademy.ge/usaid-faq">ყველა კითხვა</a>
+                </div>
+                <div id="questions-div">
+                    <div class = "question-and-answer">
+                        <div class = "question">
+                            <p class = "question-txt">როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?</p>
+                            <p onClick = "questionArrowEvent(1)" class = "question-arrow">&darr;</p>
+                        </div>
+                        <div style = "display: none;" class = "answer" id = "answer-1">
+                            <p>
+                                კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:
+                            </p>
+                            <p id = "answer-1-steps">
+                                I ეტაპი - პირველ ეტაპზე საჭიროა, შეავსო სასურველი კურსისთვის განკუთვნილი სარეგისტრაციო ფორმა, რომელიც განთავსებულია კურსის შიდა გვერდზე. კურსზე რეგისტრაციის დასრულების შემდეგ დაიწყება შემოსული განცხადებების გადარჩევა. 
+                                
+                                <br>II ეტაპი - შერჩევის მეორე ეტაპი კურსების მიხედვით განსხვავებულია, ზოგიერთი კურსისთვის მოიცავს პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც მინიმალური ზღვარის გადალახვის შემთხვევაში გადახვალ შერჩევის შემდეგ ეტაპზე.
+                                
+                                <br>III ეტაპი - მესამე ეტაპი კურსების მიხედვით განსხვავდება: Advance კურსებზე, სადაც მოითხოვება გარკვეული ტექნიკური ცოდნა, მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი ცოდნის დონის შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის წინასწარი ცოდნა მოთხოვნილი არ არის უნდა შეასრულოთ ტექნიკური დავალება, რაც თქვენი კვლევისა და თვითსწავლის უნარს ამოწმებს.
+                                
+                                <br>IV ეტაპი - შერჩევის ბოლო მეოთხე ეტაპი მოიცავს გასაუბრებას შესარჩევ კომისიასთან. გასაუბრების წარმატებით გავლის შემთხვევაში ჩაირიცხებით კურსზე და გაფორმდება შესაბამისი ხელშეკრულება.
+                            </p>
+                            <p>
+                                * სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია, ყურადღებით წაიკითხო კურსის აღწერა, ნახო რას ისწავლი კურსის განმავლობაში და გაიგო გააჩნია თუ არა კურსს დასწრების წინაპირობა.
+                            </p>
+                        </div>
+                    </div>
+                    <div class = "question-and-answer">
+                        <div class = "question">
+                            <p class = "question-txt">შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია</p>
+                            <p onClick = "questionArrowEvent(2)" class = "question-arrow">&darr;</p>
+                        </div>
+                        <div style = "display: none;" class = "answer" id = "answer-2">
+                            <p>
+                                TBC X USAID ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ კანდიდატს აქვს მხოლოდ ერთი კურსის გავლის შესაძლებლობა. 
+                                გარდა Information Security და Python კურსებისა, სადაც Basic დონის გავლის შემდეგ შესაძლებელია სწავლის გაგრძელება Advance დონეზე.
+                            </p>
+                        </div>
+                    </div>
+                    <div class = "question-and-answer">
+                        <div class = "question">
+                            <p class = "question-txt">რა ღირს სწავლა პროგრამის ფარგლებში?</p>
+                            <p onClick = "questionArrowEvent(3)" class = "question-arrow">&darr;</p>
+                        </div>
+                        <div style = "display: none;" class = "answer" id = "answer-3">
+                            <p>
+                                პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია თიბისი ბანკისა და USAID-ის მიერ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ending-wrapper">
+            <div id="ending-div">
+                <div id="ending-logos">
+                    <img src = "assets/images/Tbc Logo.webp" id = "tbc-logo">
+                    <div id="fb-yt-logos-div">
+                        <a href = "https://www.facebook.com/tbcbank/"><img src = "assets/images/facebook logo.webp" id = "fb-logo"></a>
+                        <a href = "https://www.youtube.com/channel/UCGk9R2LV2ywOL80r8Xc6xtQ"><img src = "assets/images/youtube logo.webp" id = "yt-logo"></a>
+                    </div>
+                </div>
+                <div id="ending-infos">
+                    <div id="rights-rules-txt">
+                        <p id = "rights-txt"><a href = "https://fsymbols.com/copyright/">© 2023</a> ყველა უფლება დაცულია</p>
+                        <p onClick = "showRightsAndRules()"id = "rules-txt-caller">წესები და პირობები</p>
+                    </div>
+                    <div id="support-link">
+                        <button id = "support-txt">მოგვწერეთ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p id = "rules-txt"><object data="assets/rightsAndRules.txt"></object><button onClick="closeRightsAndRules()">დახურვა</button></p>
     </body>
 </html>

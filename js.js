@@ -59,3 +59,16 @@ function startAppearance(id) {
 function slideTimer() {
     slide(1, -1);
 }
+
+const showRightsAndRules = () => {
+    document.getElementById('rules-txt').style.display = "block";
+};
+
+const closeRightsAndRules = () => {
+    document.getElementById('rules-txt').style.display = "none";
+};
+
+const questionArrowEvent = (questionId) => {
+    const answerDiv = document.getElementById("answer-" + questionId);
+    answerDiv.style.display = (answerDiv.style.display === "none" ? "block" : "none");
+}
