@@ -426,9 +426,15 @@ li a:hover {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 50%;
     width: 100px;
     height: 50px;
+    position: relative;
+    left: 45%;
+}
+
+#rules-txt button:hover {
+    background-color: rgb(26, 34, 33);
+    color: rgb(79, 82, 247);   
 }
 
 #questions-wrapper {
@@ -486,12 +492,12 @@ li a:hover {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .question-txt, .question-arrow{
     color:white;
     font-size: 20px;
-    cursor: pointer;
 }
 
 .answer {
@@ -509,13 +515,12 @@ li a:hover {
     margin-left: 5%;
 }
 
-
 @media screen and (max-width: 1200px) {
     #learning-courses-div, #partners-div, #ending-div, #questions-and-title-div {
         width: 60vw;
     }
 
-    #questions-title-div h2, #questions-title-div a, .question-txt, .question-arrow {
+    #questions-title-div h2, #questions-title-div a, .question-txt {
         font-size: 20px;
     }
 
@@ -535,7 +540,7 @@ li a:hover {
         width: 80%;
     }
     
-    #questions-title-div h2, #questions-title-div a, .question-txt, .question-arrow {
+    #questions-title-div h2, #questions-title-div a, .question-txt{
         font-size: 16px;
     }
 
@@ -550,9 +555,15 @@ li a:hover {
     .slide-button {
         font-size: 25px;
     }
+
     #support-link button {
         width: auto;
     }
+
+    #rules-txt button {
+        left: 30%;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -605,5 +616,11 @@ li a:hover {
 
     #tbc-logo {
         width: 80px;
+    }
+
+    #rules-txt button {
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
     }
 }

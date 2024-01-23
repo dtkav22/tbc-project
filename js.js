@@ -23,6 +23,9 @@ const slide = (dir, newSection) => {
     clearInterval(timer);
     timer = setInterval(slideTimer, 5000);
 
+    if(newSection == imgSectionPointer) {
+        return;
+    }
     newSection = (newSection === -1 ? (imgSectionPointer + dir + 3) % 3 : newSection);
 
     imgIdArr[newSection].forEach((id) => startAppearance("partner-" + id));
@@ -35,11 +38,8 @@ function startDisappearance(id){
     img.style.opacity = "1";
     let disappearanaceInterval = setInterval(disappearanceFrame, 50);
     function disappearanceFrame() {
-        if(img.style.opacity === "0") {
-            clearInterval(disappearanaceInterval);
-        } else {
-            img.style.opacity = String(parseFloat(img.style.opacity) - 0.1);
-        }
+        img.style.opacity = String(parseFloat(img.style.opacity) - 0.1);
+        (img.style.opacity === "0" && clearInterval(disappearanaceInterval));
     }
 }
 
@@ -48,11 +48,8 @@ function startAppearance(id) {
     img.style.opacity = "0";
     let appearanceInterval = setInterval(appearanceFrame, 50);
     function appearanceFrame() {
-        if(img.style.opacity === "1") {
-            clearInterval(appearanceInterval);
-        } else {
-            img.style.opacity = String(parseFloat(img.style.opacity) + 0.1);
-        }
+        img.style.opacity = String(parseFloat(img.style.opacity) + 0.1);
+        (img.style.opacity === "1" && clearInterval(appearanceInterval));
     }
 }
 
@@ -71,4 +68,6 @@ const closeRightsAndRules = () => {
 const questionArrowEvent = (questionId) => {
     const answerDiv = document.getElementById("answer-" + questionId);
     answerDiv.style.display = (answerDiv.style.display === "none" ? "block" : "none");
+    const questionArrow = document.getElementsByClassName("question-arrow");
+    questionArrow[questionId - 1].innerText = (questionArrow[questionId - 1].innerText === "⌄" ? "˄": "⌄");
 }
